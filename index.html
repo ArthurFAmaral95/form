@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Good Vibes Form</h1>
+    </header>
+    <main>
+      <h2>Tell us something positive that happened to you today.</h2>
+      <form action="">
+        <fieldset id="personalInfo">
+          <legend>Personal Information</legend>
+          <div class="field">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              id="name"
+              name="name"
+              required
+              maxlength="40"
+              size="40"
+            />
+          </div>
+          <div class="field">
+            <label for="mail">E-mail</label>
+            <input
+              type="email"
+              placeholder="example@example.com"
+              id="mail"
+              name="mail"
+              pattern=".+@.+\.com"
+              size="40"
+              maxlength="40"
+              title="Enter your e-mail addess. example@example.com"
+            />
+          </div>
+        </fieldset>
+        <fieldset id="dayInfo">
+          <legend>About your day</legend>
+          <div class="field">
+            <label for="grade"
+              >On a scale of 1 - 10, how good was your day?</label
+            >
+            <input
+              type="number"
+              id="grade"
+              name="grade"
+              numeric
+              min="1"
+              max="10"
+              step="1"
+              placeholder="Enter a number between 1 and 10"
+            />
+          </div>
+          <div class="field">
+            <label for="location">Where did it happen?</label>
+            <select name="location" id="location">
+              <option value="home">At home</option>
+              <option value="commute">On my commute</option>
+              <option value="work">At work</option>
+              <option value="street">On the street</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="time">At what time of day did it happen?</label>
+            <ul>
+              <li>
+                <input type="radio" id="morning" name="time" value="morning" />
+                <label for="morning">Morning</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="afternoon"
+                  name="time"
+                  value="afternoon"
+                />
+                <label for="afternoon">Afternoon</label>
+              </li>
+              <li>
+                <input type="radio" id="evening" name="time" value="evening" />
+                <label for="evening">Evening</label>
+              </li>
+            </ul>
+          </div>
+          <div class="field">
+            <label for="emotions"
+              >What emotions did you experience? (Sellect all that apply)</label
+            >
+            <ul>
+              <li>
+                <input
+                  type="checkbox"
+                  name="excited"
+                  id="excited"
+                  value="excited"
+                />
+                <label for="excited">Excited</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="humbled"
+                  id="humbled"
+                  value="humbled"
+                />
+                <label for="humbled">Humbled</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="elated"
+                  id="elated"
+                  value="elated"
+                />
+                <label for="elated">Elated</label>
+              </li>
+              <li>
+                <input type="checkbox" name="loved" id="loved" value="loved" />
+                <label for="loved">Loved</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="enthusiastic"
+                  id="enthusiastic"
+                  value="enthusiastic"
+                />
+                <label for="enthusiastic">Enthusiastic</label>
+              </li>
+            </ul>
+          </div>
+          <div class="field">
+            <label for="experience"
+              >Please describe your positive experience</label
+            >
+            <textarea
+              name="experience"
+              id="experience"
+              cols="30"
+              rows="10"
+              wrap="on"
+              maxlength="400"
+              placeholder="Enter your experience here..."
+            ></textarea>
+          </div>
+        </fieldset>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </body>
+</html>
